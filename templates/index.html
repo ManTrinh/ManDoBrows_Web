@@ -1,0 +1,37 @@
+{% extends "common/layout.html" %}
+{% block content1 %}
+<div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+    <ul class="navbar-nav text-uppercase">
+        <li class="nav-item active">
+            <a class="nav-link tm-nav-link" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link tm-nav-link" href="{{url_for('about')}}">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link tm-nav-link" href="{{url_for('services')}}">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link tm-nav-link" href="{{url_for('contact')}}">Contact</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+{% block content2 %}
+<div class="tm-row">
+    <div class="tm-col-left"></div>
+    <main class="tm-col-right">
+        <section class="tm-content tm-about">
+            <h2 class="mb-5 tm-content-title">Man Do Brows</h2>
+            <p class="mb-5">Imagine waking up with eyebrows that are perfectly filled in. Imagine waking up with all the
+                hair strokes perfectly placed in between your eyebrows where there may be gaps and empty spots.</p>
+            <hr class="mb-5">
+            <p class="mb-5">Eyebrows are one of the first things people notice about your face and this is why I take
+                pride in creating uniquely designed brows for my clients using different techniques. Man Do EyeBrows
+                delivers quality and professionalism in a relaxed and comfortable setting. I am fully licensed, insured,
+                and use only premium pigments and products.</p>
+            <a href="{{url_for('about')}}" class="btn btn-primary">Continue...</a>
+        </section>
+    </main>
+</div>
+{% endblock %}
