@@ -38,7 +38,7 @@ def thank():
         name = request.form['name']
         email_from = request.form['email']
 
-        msg = Message(name,sender='mandoeyebrows@gmail.com', recipients=["trinhthongman96@gmail.com"])
+        msg = Message(name,sender='mandoeyebrows@gmail.com', recipients=["luanma7102@gmail.com"])
         msg.body = "Hi my name is : {} \nI need to reply for: {} \nPlease contact with my to : {}".format(name, content, email_from)
         mail.send(msg)
         return render_template("thank.html")
