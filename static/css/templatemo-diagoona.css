@@ -297,6 +297,7 @@ textarea {
     color: white;
 }
 
+/*About*/
 .man-logo {
     background-image: url("../img/LogoManDoBrows.jpg");
     height: 80px;
@@ -308,8 +309,8 @@ textarea {
 
 .man-box {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     overflow: hidden;
@@ -324,7 +325,7 @@ textarea {
 .man-box::before {
     content: '';
     position: absolute;
-    inset: -10px 140px;
+    inset: -10px 75px;
     background: linear-gradient(315deg, #00ccff, #d400d4);
     transition: 0.5s;
     animation: animate 4s linear infinite;
@@ -353,7 +354,7 @@ textarea {
 
 .man-box-content {
     position: absolute;
-    inset: 30px;
+    inset: 10px;
     border: 6px solid #070a1c;
     z-index: 3;
     border-radius: 50%;
@@ -526,115 +527,38 @@ textarea {
         margin-left: 0;
     }
 }
-
-.slider {
-    width: 100%
-}
-
-.slider input {
-    display: none;
-}
-
-.testimonials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 400px;
-    perspective: 1000px;
-    overflow: hidden;
-}
-
-.testimonials .item {
-    width: 300px;
-    border-radius: 5px;
-    background-color: #162052;
-    position: absolute;
-    border: 3px solid #fff;
-    top: 0;
-    box-sizing: border-box;
-    text-align: center;
-    transition: transform 0.4s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    user-select: none;
-    cursor: pointer;
-}
-
-.testimonials .item h1 {
-    font-size: 114px;
-    color: white;
-}
-
-.dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dots label {
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: #413B52;
-    margin: 7px;
-    transition-duration: 0.2s;
-}
-
-#t-1:checked~.dots label[for="t-1"],
-#t-2:checked~.dots label[for="t-2"],
-#t-3:checked~.dots label[for="t-3"] {
-    transform: scale(2);
-    background-color: #fff;
-    box-shadow: 0px 0px 0px 3px #dddddd24;
-}
-
-#t-1:checked~.dots label[for="t-2"],
-#t-2:checked~.dots label[for="t-1"],
-#t-2:checked~.dots label[for="t-3"],
-#t-3:checked~.dots label[for="t-2"],
-#t-4:checked~.dots label[for="t-3"] {
-    transform: scale(1.5);
-}
-
-#t-1:checked~.testimonials label[for="t-3"],
-#t-4:checked~.testimonials label[for="t-1"],
-#t-5:checked~.testimonials label[for="t-2"] {
-    transform: translate3d(600px, 0, -180px) rotateY(-25deg);
-    z-index: 2;
-}
-
-#t-1:checked~.testimonials label[for="t-2"],
-#t-2:checked~.testimonials label[for="t-3"],
-#t-5:checked~.testimonials label[for="t-1"] {
-    transform: translate3d(300px, 0, -90px) rotateY(-15deg);
-    z-index: 3;
-}
-
-#t-2:checked~.testimonials label[for="t-1"],
-#t-3:checked~.testimonials label[for="t-2"],
-#t-4:checked~.testimonials label[for="t-3"] {
-    transform: translate3d(-300px, 0, -90px) rotateY(15deg);
-    z-index: 3;
-}
-
-#t-3:checked~.testimonials label[for="t-1"],
-#t-4:checked~.testimonials label[for="t-2"],
-#t-5:checked~.testimonials label[for="t-3"] {
-    transform: translate3d(-600px, 0, -180px) rotateY(25deg);
-
-}
-
-#t-1:checked~.testimonials label[for="t-1"],
-#t-2:checked~.testimonials label[for="t-2"],
-#t-3:checked~.testimonials label[for="t-3"] {
-
-    z-index: 4;
-}
-
-.item img {
+/*Image Service*/
+.row{
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    transition: all .3s ease;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px 30px;
 }
+
+.row .left{
+    overflow: hidden;   
+}
+
+.row .left img{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.row .right{
+    display: flex;
+    align-items: center;
+
+}
+
+.row .right .service-content
+{
+    padding-left: 20px;
+}
+
+.row .right .service-content p{
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 15px;
+}
+

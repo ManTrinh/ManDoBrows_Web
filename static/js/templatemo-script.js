@@ -1,5 +1,5 @@
 const initBg = (autoplay = true) => {
-    const bgImgsNames = ['mandoeyebrows_bg1.jpg', 'diagoona-bg-3.jpg', 'diagoona-bg-2.jpg'];
+    const bgImgsNames = ['mandoeyebrows_bg1.jpg', 'mandoeyebrows_bg1.jpg', 'mandoeyebrows_bg1.jpg'];
     const bgImgs = bgImgsNames.map(img => "../static/img/" + img);
 
     $.backstretch(bgImgs, { duration: 4000, fade: 500 });
@@ -54,7 +54,7 @@ $(document).ready(function () {
     });
 });
 
-var listContent = ["Powder brows is a cosmetic semi permanent makeup technique designed to create eyebrows with soft powder effect, very similar to powder makeup. Powder effect is done with a shading technique using a permanent makeup device, which is similar to a tattoo gun. For clients who draw on their eyebrows everyday, this can be an amazing, beautiful solution. It is also a great alternative for clients that are not good candidates for Microblading or Combo Brows because their skin is too oily as shading is suitable for any skin type!",
+/*var listContent = ["Powder brows is a cosmetic semi permanent makeup technique designed to create eyebrows with soft powder effect, very similar to powder makeup. Powder effect is done with a shading technique using a permanent makeup device, which is similar to a tattoo gun. For clients who draw on their eyebrows everyday, this can be an amazing, beautiful solution. It is also a great alternative for clients that are not good candidates for Microblading or Combo Brows because their skin is too oily as shading is suitable for any skin type!",
     "The Machine Hair Strokes technique creates the same realistic hair-strokes effect as Microblading, but with a machine rather than a hand tool. You get longer-lasting results and half the healing time because more pigment is deposited without cutting into or “blading” the skin. This procedure is a terrific option for people with significant skin conditions such as very oily skin, excessive bleeding, and sensitive skin. The Machine Hair Strokes procedure is used for enhancing the appearance of eyebrows in the same way temporary makeup would be used.It will enable you to look your best while saving time in the morning and can be used for people recovering from chemotherapy, alopecia, or scarring.",
     ""]
 let zoom1 = document.querySelector('.serviceImg1')
@@ -75,6 +75,6 @@ zoom2.addEventListener('click', function () {
     document.getElementById("info").innerHTML = `<h1>${title}</h1><p>${content}</p>`;
 })
 
-/*zoom.addEventListener('mouseout', () => {
+zoom.addEventListener('mouseout', () => {
     document.getElementById("demo").innerHTML = "";
 })*/
