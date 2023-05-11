@@ -32,7 +32,7 @@ MarkupSafe==2.1.2
 matplotlib==3.5.3
 mdurl==0.1.2
 namegenerator==1.0.6
-networkx==3.1
+networkx==2.6.3
 numpy==1.23.4
 opencv-python==4.6.0.66
 packaging==21.3
