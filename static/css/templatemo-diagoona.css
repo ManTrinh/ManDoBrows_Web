@@ -638,8 +638,3 @@ textarea {
     object-fit: cover;
     transition: all .3s ease;
 }
-
-.testimonials .item:hover img {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-}
