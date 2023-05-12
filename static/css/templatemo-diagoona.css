@@ -307,70 +307,86 @@ textarea {
     background-repeat: no-repeat;
 }
 
-.man-box {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.man-center {
+.avarta-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.man-box::before {
-    content: '';
-    position: absolute;
-    inset: -5px 75px;
-    background: linear-gradient(200deg, #00ccff, #d400d4);
-    transition: 0.5s;
-    animation: animate 4s linear infinite;
+.avatar {
+    height: 300px;
+    position: relative;
+    width: 300px;
 }
 
-@keyframes animate {
+.avatar img {
+    border-radius: 9999px;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+@keyframes cycle-colors {
     0% {
-        transform: rotate(0deg);
+        border-color: hsl(0, 100%, 50%);
+    }
+
+    25% {
+        border-color: hsl(90, 100%, 50%);
+    }
+
+    50% {
+        border-color: hsl(180, 100%, 50%);
+    }
+
+    75% {
+        border-color: hsl(270, 100%, 50%);
     }
 
     100% {
-        transform: rotate(360deg);
+        border-color: hsl(360, 100%, 50%);
     }
 }
 
-.man-box::after {
-    content: '';
+@keyframes pulse {
+    to {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.avatar::before,
+.avatar::after {
+    animation: pulse 2s linear infinite;
+    border: #fff solid 8px;
+    border-radius: 9999px;
+    box-sizing: border-box;
+    content: ' ';
+    height: 140%;
+    left: -20%;
+    opacity: .6;
     position: absolute;
-    border-radius: 50%;
+    top: -20%;
+    transform: scale(0.714);
+    width: 140%;
     z-index: 1;
 }
 
-.man-box-content {
-    position: absolute;
-    inset: 20px;
-    border: 6px solid #070a1c;
-    z-index: 3;
-    border-radius: 50%;
-    overflow: hidden;
+.avatar::after {
+    animation-delay: 1s;
 }
 
-.man-box-content img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-    pointer-events: none;
+.avatar:hover::before,
+.avatar:hover::after {
+    animation: pulse 1s linear infinite, cycle-colors 6s linear infinite;
 }
 
-.man-box:hover .man-box-content img {
-    opacity: 0;
+.avatar:hover::after {
+    animation-delay: .5s;
 }
+
+/*----------*/
 
 @media (max-width: 1200px) {
     .nav-item {
@@ -523,38 +539,37 @@ textarea {
         margin-left: 0;
     }
 }
+
 /*Image Service*/
-.row{
+.row {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 50px 30px;
 }
 
-.row .left{
-    overflow: hidden;   
+.row .left {
+    overflow: hidden;
 }
 
-.row .left img{
+.row .left img {
     width: 500px;
     height: 300px;
     object-fit: cover;
 }
 
-.row .right{
+.row .right {
     display: flex;
     align-items: center;
 
 }
 
-.row .right .service-content
-{
+.row .right .service-content {
     padding-left: 20px;
 }
 
-.row .right .service-content p{
+.row .right .service-content p {
     font-size: 16px;
     line-height: 26px;
     padding-bottom: 15px;
 }
-
