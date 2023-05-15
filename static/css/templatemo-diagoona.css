@@ -543,7 +543,7 @@ textarea {
 /*Image Service*/
 .row {
     width: 100%;
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr;
     grid-gap: 50px 30px;
 }
@@ -572,4 +572,30 @@ textarea {
     font-size: 16px;
     line-height: 26px;
     padding-bottom: 15px;
+}
+
+/*Image Product*/
+.scroll-image {
+    position: relative;
+    /* Đặt hình ảnh trong container */
+    left: 100%;
+    /* Đặt vị trí ban đầu ở dưới */
+    left: 50%;
+    /* Đặt vị trí ban đầu ở giữa */
+    transform: translateX(-50%);
+    /* Để căn giữa hình ảnh */
+    animation: slide-in 5s ease-in forwards;
+    /* Áp dụng hiệu ứng chuyển động */
+}
+
+@keyframes slide-in {
+    0% {
+        left: 100%;
+        /* Vị trí bắt đầu của hình ảnh */
+    }
+
+    100% {
+        left: 50%;
+        /* Vị trí kết thúc của hình ảnh */
+    }
 }
